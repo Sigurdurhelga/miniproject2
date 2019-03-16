@@ -6,6 +6,8 @@ int direction = 0;
 int locX = 0;
 int locY = 0;
 
+int visited[3][3];
+
 void turn(){
     direction++;
     direction = direction % 4;
@@ -21,6 +23,7 @@ void move(){
     } else if (direction == 3){
         locX--;
     }
+    visited[locX][locY]++;
 }</declaration>
 	<template>
 		<name x="5" y="5">Template</name>
@@ -46,9 +49,102 @@ void move(){
 		</location>
 		<init ref="id8"/>
 		<transition>
+			<source ref="id1"/>
+			<target ref="id1"/>
+			<label kind="guard" x="-143" y="17">direction != 1</label>
+			<label kind="assignment" x="-143" y="51">turn()</label>
+			<nail x="-161" y="51"/>
+			<nail x="-127" y="102"/>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id0"/>
+			<label kind="guard" x="-106" y="-352">direction != 2</label>
+			<label kind="assignment" x="-106" y="-318">turn()</label>
+			<nail x="-102" y="-340"/>
+			<nail x="-51" y="-323"/>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id8"/>
+			<label kind="guard" x="-645" y="-267">direction == 2</label>
+			<label kind="assignment" x="-645" y="-233">move()</label>
+			<nail x="-663" y="-153"/>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id7"/>
+			<label kind="guard" x="-620" y="-369">direction != 2 &amp;&amp; direction != 1</label>
+			<label kind="assignment" x="-620" y="-335">turn()</label>
+			<nail x="-646" y="-357"/>
+			<nail x="-654" y="-297"/>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id8"/>
+			<label kind="guard" x="-595" y="-9">direction != 0</label>
+			<label kind="assignment" x="-595" y="25">turn()</label>
+			<nail x="-646" y="25"/>
+			<nail x="-595" y="51"/>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id7"/>
+			<label kind="guard" x="-595" y="-475">direction == 2</label>
+			<label kind="assignment" x="-595" y="-441">move()</label>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id6"/>
+			<label kind="guard" x="-577" y="-607">direction == 3</label>
+			<label kind="assignment" x="-577" y="-573">move()</label>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id5"/>
+			<label kind="guard" x="-84" y="-607">direction == 3</label>
+			<label kind="assignment" x="-84" y="-573">move()</label>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id4"/>
+			<label kind="guard" x="471" y="-441">direction == 0</label>
+			<label kind="assignment" x="471" y="-407">move()</label>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id3"/>
+			<label kind="guard" x="467" y="-123">direction == 0</label>
+			<label kind="assignment" x="467" y="-89">move()</label>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id7"/>
+			<label kind="guard" x="-595" y="-191">direction == 0</label>
+			<label kind="assignment" x="-595" y="-157">move()</label>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id2"/>
+			<label kind="guard" x="-75" y="25">direction == 1</label>
+			<label kind="assignment" x="-75" y="59">move()</label>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id1"/>
+			<label kind="guard" x="-101" y="-157">direction == 2</label>
+			<label kind="assignment" x="-101" y="-123">move()</label>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id0"/>
+			<label kind="guard" x="-577" y="-339">direction == 1</label>
+			<label kind="assignment" x="-577" y="-305">move()</label>
+		</transition>
+		<transition>
 			<source ref="id2"/>
 			<target ref="id2"/>
-			<label kind="guard" x="485" y="42">direction != 3</label>
+			<label kind="guard" x="485" y="42">direction != 0</label>
 			<label kind="assignment" x="485" y="76">turn()</label>
 			<nail x="578" y="85"/>
 			<nail x="544" y="161"/>
@@ -56,7 +152,7 @@ void move(){
 		<transition>
 			<source ref="id4"/>
 			<target ref="id4"/>
-			<label kind="guard" x="545" y="-645">direction != 2</label>
+			<label kind="guard" x="545" y="-645">direction != 3</label>
 			<label kind="assignment" x="545" y="-611">turn()</label>
 			<nail x="527" y="-637"/>
 			<nail x="612" y="-586"/>
@@ -64,82 +160,10 @@ void move(){
 		<transition>
 			<source ref="id6"/>
 			<target ref="id6"/>
-			<label kind="guard" x="-687" y="-620">direction != 1</label>
+			<label kind="guard" x="-687" y="-620">direction != 2</label>
 			<label kind="assignment" x="-687" y="-586">turn()</label>
 			<nail x="-705" y="-603"/>
 			<nail x="-629" y="-646"/>
-		</transition>
-		<transition>
-			<source ref="id1"/>
-			<target ref="id8"/>
-			<label kind="guard" x="-220" y="-17">direction == 3</label>
-			<label kind="assignment" x="-220" y="17">move()</label>
-			<nail x="-238" y="-17"/>
-			<nail x="-450" y="-17"/>
-		</transition>
-		<transition>
-			<source ref="id3"/>
-			<target ref="id2"/>
-			<label kind="guard" x="492" y="-237">direction == 2</label>
-			<label kind="assignment" x="492" y="-203">move()</label>
-			<nail x="518" y="-161"/>
-			<nail x="518" y="0"/>
-		</transition>
-		<transition>
-			<source ref="id5"/>
-			<target ref="id4"/>
-			<label kind="guard" x="17" y="-663">direction == 1</label>
-			<label kind="assignment" x="178" y="-663">move()</label>
-			<nail x="8" y="-637"/>
-			<nail x="297" y="-637"/>
-		</transition>
-		<transition>
-			<source ref="id2"/>
-			<target ref="id1"/>
-			<label kind="guard" x="349" y="0">direction == 3</label>
-			<label kind="assignment" x="349" y="34">move()</label>
-			<nail x="331" y="0"/>
-			<nail x="85" y="-8"/>
-		</transition>
-		<transition>
-			<source ref="id4"/>
-			<target ref="id3"/>
-			<label kind="guard" x="459" y="-459">direction == 2</label>
-			<label kind="assignment" x="484" y="-416">move()</label>
-			<nail x="586" y="-459"/>
-			<nail x="586" y="-357"/>
-		</transition>
-		<transition>
-			<source ref="id6"/>
-			<target ref="id5"/>
-			<label kind="guard" x="-510" y="-671">direction == 1</label>
-			<label kind="assignment" x="-382" y="-671">move()</label>
-			<nail x="-501" y="-646"/>
-			<nail x="-246" y="-646"/>
-		</transition>
-		<transition>
-			<source ref="id7"/>
-			<target ref="id6"/>
-			<label kind="guard" x="-679" y="-390">direction == 0</label>
-			<label kind="assignment" x="-679" y="-356">move()</label>
-			<nail x="-697" y="-399"/>
-			<nail x="-697" y="-510"/>
-		</transition>
-		<transition>
-			<source ref="id8"/>
-			<target ref="id7"/>
-			<label kind="guard" x="-850" y="-212">direction == 0</label>
-			<label kind="assignment" x="-824" y="-170">move()</label>
-			<nail x="-705" y="-110"/>
-			<nail x="-705" y="-229"/>
-		</transition>
-		<transition>
-			<source ref="id8"/>
-			<target ref="id8"/>
-			<label kind="guard" x="-833" y="25">direction != 0</label>
-			<label kind="assignment" x="-816" y="110">turn()</label>
-			<nail x="-756" y="76"/>
-			<nail x="-654" y="110"/>
 		</transition>
 	</template>
 	<system>// Place template instantiations here.
