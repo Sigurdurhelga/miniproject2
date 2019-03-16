@@ -5,7 +5,7 @@
 int direction;
 int locX;
 int locY;
-
+int total_steps;
 int visited[3][3];
 
 void initialize(){
@@ -13,11 +13,13 @@ void initialize(){
     locX = 0;
     locY = 0;
     visited[0][0] = 1;
+    total_steps = 0;
 }
 
 void turn(){
     direction++;
     direction = direction % 4;
+    total_steps++;
 }
 
 void move(){ 
@@ -30,7 +32,8 @@ void move(){
     } else if (direction == 3){
         locX--;
     }
-    visited[locX][locY]++;   
+    visited[locX][locY]++;
+    total_steps++;
 }</declaration>
 	<template>
 		<name x="5" y="5">Template</name>
@@ -341,7 +344,7 @@ system Process;</system>
 			</comment>
 		</query>
 		<query>
-			<formula>E&lt;&gt;visited[0][0] != 0 &amp;&amp; visited[0][1] != 0 &amp;&amp; visited[0][2] != 0 &amp;&amp; visited[1][0] != 0 &amp;&amp; visited[1][1] != 0 &amp;&amp; visited[1][2] != 0 &amp;&amp; visited[2][0] != 0 &amp;&amp; visited[2][1] != 0 &amp;&amp; visited[2][2] != 0
+			<formula>E&lt;&gt;(visited[0][0] == 2 &amp;&amp; visited[0][1] != 0 &amp;&amp; visited[0][2] != 0 &amp;&amp; visited[1][0] != 0 &amp;&amp; visited[1][1] != 0 &amp;&amp; visited[1][2] != 0 &amp;&amp; visited[2][0] != 0 &amp;&amp; visited[2][1] != 0 &amp;&amp; visited[2][2] != 0 &amp;&amp; total_steps == 15)
 			</formula>
 			<comment>"All squares are visited infinitely often"
 			</comment>

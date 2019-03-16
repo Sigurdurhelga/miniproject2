@@ -86,14 +86,6 @@ void move(){
 			<nail x="518" y="0"/>
 		</transition>
 		<transition>
-			<source ref="id3"/>
-			<target ref="id0"/>
-			<label kind="guard" x="315" y="-322">direction == 3</label>
-			<label kind="assignment" x="315" y="-288">move()</label>
-			<nail x="297" y="-331"/>
-			<nail x="51" y="-340"/>
-		</transition>
-		<transition>
 			<source ref="id5"/>
 			<target ref="id4"/>
 			<label kind="guard" x="17" y="-663">direction == 1</label>
