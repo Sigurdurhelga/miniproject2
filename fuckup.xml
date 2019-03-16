@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>// Place global declarations here.
+int direction = 0;
+int locX = 0;
+int locY = 0;
+
+void turn(){
+    direction++;
+    direction = direction % 4;
+}
+
+void move(){
+    if (direction == 0){
+        locY++;
+    } else if (direction == 1){
+        locX++;
+    } else if (direction == 2){
+        locY--;
+    } else if (direction == 3){
+        locX--;
+    }
+}</declaration>
+	<template>
+		<name x="5" y="5">Template</name>
+		<declaration>// Place local declarations here.
+</declaration>
+		<location id="id0" x="-110" y="-297">
+		</location>
+		<location id="id1" x="-93" y="51">
+		</location>
+		<location id="id2" x="467" y="68">
+		</location>
+		<location id="id3" x="467" y="-246">
+		</location>
+		<location id="id4" x="476" y="-569">
+		</location>
+		<location id="id5" x="-102" y="-578">
+		</location>
+		<location id="id6" x="-595" y="-569">
+		</location>
+		<location id="id7" x="-595" y="-314">
+		</location>
+		<location id="id8" x="-595" y="0">
+		</location>
+		<init ref="id8"/>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id2"/>
+			<label kind="guard" x="485" y="42">direction != 3</label>
+			<label kind="assignment" x="485" y="76">turn()</label>
+			<nail x="578" y="85"/>
+			<nail x="544" y="161"/>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id4"/>
+			<label kind="guard" x="545" y="-645">direction != 2</label>
+			<label kind="assignment" x="545" y="-611">turn()</label>
+			<nail x="527" y="-637"/>
+			<nail x="612" y="-586"/>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id6"/>
+			<label kind="guard" x="-687" y="-620">direction != 1</label>
+			<label kind="assignment" x="-687" y="-586">turn()</label>
+			<nail x="-705" y="-603"/>
+			<nail x="-629" y="-646"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id8"/>
+			<label kind="guard" x="-220" y="-17">direction == 3</label>
+			<label kind="assignment" x="-220" y="17">move()</label>
+			<nail x="-238" y="-17"/>
+			<nail x="-450" y="-17"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id2"/>
+			<label kind="guard" x="492" y="-237">direction == 2</label>
+			<label kind="assignment" x="492" y="-203">move()</label>
+			<nail x="518" y="-161"/>
+			<nail x="518" y="0"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id0"/>
+			<label kind="guard" x="315" y="-322">direction == 3</label>
+			<label kind="assignment" x="315" y="-288">move()</label>
+			<nail x="297" y="-331"/>
+			<nail x="51" y="-340"/>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id4"/>
+			<label kind="guard" x="17" y="-663">direction == 1</label>
+			<label kind="assignment" x="178" y="-663">move()</label>
+			<nail x="8" y="-637"/>
+			<nail x="297" y="-637"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id1"/>
+			<label kind="guard" x="349" y="0">direction == 3</label>
+			<label kind="assignment" x="349" y="34">move()</label>
+			<nail x="331" y="0"/>
+			<nail x="85" y="-8"/>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id3"/>
+			<label kind="guard" x="459" y="-459">direction == 2</label>
+			<label kind="assignment" x="484" y="-416">move()</label>
+			<nail x="586" y="-459"/>
+			<nail x="586" y="-357"/>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id5"/>
+			<label kind="guard" x="-510" y="-671">direction == 1</label>
+			<label kind="assignment" x="-382" y="-671">move()</label>
+			<nail x="-501" y="-646"/>
+			<nail x="-246" y="-646"/>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id6"/>
+			<label kind="guard" x="-679" y="-390">direction == 0</label>
+			<label kind="assignment" x="-679" y="-356">move()</label>
+			<nail x="-697" y="-399"/>
+			<nail x="-697" y="-510"/>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id7"/>
+			<label kind="guard" x="-850" y="-212">direction == 0</label>
+			<label kind="assignment" x="-824" y="-170">move()</label>
+			<nail x="-705" y="-110"/>
+			<nail x="-705" y="-229"/>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id8"/>
+			<label kind="guard" x="-833" y="25">direction != 0</label>
+			<label kind="assignment" x="-816" y="110">turn()</label>
+			<nail x="-756" y="76"/>
+			<nail x="-654" y="110"/>
+		</transition>
+	</template>
+	<system>// Place template instantiations here.
+Process = Template();
+
+// List one or more processes to be composed into a system.
+system Process;</system>
+	<queries>
+		<query>
+			<formula>E&lt;&gt;locX==2&amp;&amp;locY==2
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>A&lt;&gt;locX&gt;=0 &amp;&amp; locX &lt;= 2 &amp;&amp; locY &gt;= 0 &amp;&amp; locY &lt;= 2
+			</formula>
+			<comment>
+			</comment>
+		</query>
+	</queries>
+</nta>
