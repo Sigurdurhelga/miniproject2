@@ -51,35 +51,28 @@ void move(){
 		<name x="5" y="5">Template</name>
 		<declaration>// Place local declarations here.
 </declaration>
-		<location id="id0" x="-833" y="85">
+		<location id="id0" x="-612" y="-280">
 		</location>
-		<location id="id1" x="-612" y="-280">
+		<location id="id1" x="-612" y="85">
 		</location>
-		<location id="id2" x="-612" y="85">
+		<location id="id2" x="-612" y="-663">
 		</location>
-		<location id="id3" x="-612" y="-663">
+		<location id="id3" x="-25" y="-272">
 		</location>
-		<location id="id4" x="-25" y="-272">
+		<location id="id4" x="-25" y="-655">
 		</location>
-		<location id="id5" x="-25" y="-655">
+		<location id="id5" x="-25" y="93">
 		</location>
-		<location id="id6" x="-25" y="93">
+		<location id="id6" x="521" y="-283">
 		</location>
-		<location id="id7" x="521" y="-283">
+		<location id="id7" x="504" y="-657">
 		</location>
-		<location id="id8" x="504" y="-657">
+		<location id="id8" x="530" y="99">
 		</location>
-		<location id="id9" x="530" y="99">
-		</location>
-		<init ref="id0"/>
+		<init ref="id1"/>
 		<transition>
-			<source ref="id0"/>
-			<target ref="id2"/>
-			<label kind="assignment" x="-765" y="68">initialize()</label>
-		</transition>
-		<transition>
-			<source ref="id7"/>
-			<target ref="id9"/>
+			<source ref="id6"/>
+			<target ref="id8"/>
 			<label kind="guard" x="340" y="-178">direction == 2 &amp;&amp; x &gt;= 5</label>
 			<label kind="assignment" x="399" y="-153">move(),
 x = 0</label>
@@ -87,8 +80,8 @@ x = 0</label>
 			<nail x="496" y="-130"/>
 		</transition>
 		<transition>
-			<source ref="id8"/>
-			<target ref="id7"/>
+			<source ref="id7"/>
+			<target ref="id6"/>
 			<label kind="guard" x="323" y="-493">direction == 2 &amp;&amp; x &gt;= 5</label>
 			<label kind="assignment" x="374" y="-467">move(),
 x = 0</label>
@@ -96,62 +89,8 @@ x = 0</label>
 			<nail x="488" y="-343"/>
 		</transition>
 		<transition>
-			<source ref="id5"/>
-			<target ref="id4"/>
-			<label kind="guard" x="-186" y="-476">direction == 2 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="-169" y="-459">move(),
-x = 0</label>
-			<nail x="-93" y="-493"/>
-			<nail x="-93" y="-408"/>
-		</transition>
-		<transition>
-			<source ref="id4"/>
-			<target ref="id6"/>
-			<label kind="guard" x="-229" y="-76">direction == 2 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="-127" y="-42">move(),
-x = 0</label>
-			<nail x="-68" y="-135"/>
-			<nail x="-68" y="-59"/>
-		</transition>
-		<transition>
-			<source ref="id1"/>
-			<target ref="id2"/>
-			<label kind="guard" x="-569" y="-153">direction == 2 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="-527" y="-127">move(),
-x = 0</label>
-			<nail x="-578" y="-229"/>
-			<nail x="-578" y="-135"/>
-		</transition>
-		<transition>
-			<source ref="id3"/>
-			<target ref="id1"/>
-			<label kind="guard" x="-586" y="-510">direction == 2 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="-535" y="-476">move(),
-x = 0</label>
-			<nail x="-595" y="-595"/>
-			<nail x="-595" y="-339"/>
-		</transition>
-		<transition>
 			<source ref="id8"/>
 			<target ref="id5"/>
-			<label kind="guard" x="170" y="-612">direction == 3 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="221" y="-595">move(),
-x = 0</label>
-			<nail x="161" y="-629"/>
-			<nail x="59" y="-629"/>
-		</transition>
-		<transition>
-			<source ref="id7"/>
-			<target ref="id4"/>
-			<label kind="guard" x="136" y="-229">direction == 3 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="195" y="-212">move(),
-x = 0</label>
-			<nail x="187" y="-246"/>
-			<nail x="68" y="-246"/>
-		</transition>
-		<transition>
-			<source ref="id9"/>
-			<target ref="id6"/>
 			<label kind="guard" x="136" y="127">direction == 3 &amp;&amp; x &gt;= 5</label>
 			<label kind="assignment" x="187" y="161">move(),
 x = 0</label>
@@ -159,26 +98,8 @@ x = 0</label>
 			<nail x="51" y="119"/>
 		</transition>
 		<transition>
-			<source ref="id6"/>
-			<target ref="id9"/>
-			<label kind="guard" x="144" y="17">direction == 1 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="195" y="34">move(),
-x = 0</label>
-			<nail x="60" y="76"/>
-			<nail x="170" y="76"/>
-		</transition>
-		<transition>
 			<source ref="id4"/>
 			<target ref="id7"/>
-			<label kind="guard" x="102" y="-348">direction == 1 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="161" y="-331">move(),
-x = 0</label>
-			<nail x="68" y="-298"/>
-			<nail x="178" y="-298"/>
-		</transition>
-		<transition>
-			<source ref="id5"/>
-			<target ref="id8"/>
 			<label kind="guard" x="119" y="-748">direction == 1 &amp;&amp; x &gt;= 5</label>
 			<label kind="assignment" x="178" y="-722">move(),
 x = 0</label>
@@ -187,25 +108,7 @@ x = 0</label>
 		</transition>
 		<transition>
 			<source ref="id5"/>
-			<target ref="id3"/>
-			<label kind="guard" x="-348" y="-612">direction == 3 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="-306" y="-595">move(),
-x = 0</label>
-			<nail x="-119" y="-621"/>
-			<nail x="-221" y="-621"/>
-		</transition>
-		<transition>
-			<source ref="id4"/>
 			<target ref="id1"/>
-			<label kind="guard" x="-323" y="-229">direction == 3 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="-263" y="-204">move(),
-x = 0</label>
-			<nail x="-102" y="-246"/>
-			<nail x="-204" y="-246"/>
-		</transition>
-		<transition>
-			<source ref="id6"/>
-			<target ref="id2"/>
 			<label kind="guard" x="-391" y="136">direction == 3 &amp;&amp; x &gt;= 5</label>
 			<label kind="assignment" x="-331" y="153">move(),
 x = 0</label>
@@ -213,35 +116,16 @@ x = 0</label>
 			<nail x="-221" y="127"/>
 		</transition>
 		<transition>
-			<source ref="id3"/>
-			<target ref="id5"/>
+			<source ref="id2"/>
+			<target ref="id4"/>
 			<label kind="guard" x="-331" y="-731">direction == 1 &amp;&amp; x &gt;= 5</label>
 			<label kind="assignment" x="-272" y="-697">move()</label>
 			<nail x="-212" y="-672"/>
 			<nail x="-119" y="-672"/>
 		</transition>
 		<transition>
-			<source ref="id1"/>
-			<target ref="id4"/>
-			<label kind="guard" x="-306" y="-348">direction == 1 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="-255" y="-331">move(),
-x = 0</label>
-			<nail x="-204" y="-289"/>
-			<nail x="-119" y="-289"/>
-			<nail x="-102" y="-289"/>
-		</transition>
-		<transition>
-			<source ref="id2"/>
-			<target ref="id6"/>
-			<label kind="guard" x="-365" y="17">direction == 1 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="-306" y="42">move(),
-x = 0</label>
-			<nail x="-212" y="76"/>
-			<nail x="-127" y="76"/>
-		</transition>
-		<transition>
-			<source ref="id1"/>
-			<target ref="id3"/>
+			<source ref="id0"/>
+			<target ref="id2"/>
 			<label kind="guard" x="-790" y="-510">direction == 0 &amp;&amp; x &gt;= 5</label>
 			<label kind="assignment" x="-756" y="-493">move(),
 x = 0</label>
@@ -249,18 +133,6 @@ x = 0</label>
 		<transition>
 			<source ref="id1"/>
 			<target ref="id1"/>
-			<label kind="guard" x="-714" y="-305">x &gt;= 1</label>
-			<label kind="assignment" x="-705" y="-288">turn(),
-x = 0</label>
-			<nail x="-644" y="-264"/>
-			<nail x="-652" y="-280"/>
-			<nail x="-660" y="-296"/>
-			<nail x="-644" y="-296"/>
-			<nail x="-628" y="-288"/>
-		</transition>
-		<transition>
-			<source ref="id2"/>
-			<target ref="id2"/>
 			<label kind="guard" x="-714" y="119">direction != 0 &amp;&amp; x &gt;= 1</label>
 			<label kind="assignment" x="-714" y="136">turn(),
 x = 0</label>
@@ -269,15 +141,15 @@ x = 0</label>
 			<nail x="-637" y="117"/>
 		</transition>
 		<transition>
-			<source ref="id2"/>
-			<target ref="id1"/>
+			<source ref="id1"/>
+			<target ref="id0"/>
 			<label kind="guard" x="-773" y="-145">direction == 0 &amp;&amp; x &gt;= 5</label>
 			<label kind="assignment" x="-705" y="-119">move(),
 x = 0</label>
 		</transition>
 		<transition>
-			<source ref="id3"/>
-			<target ref="id3"/>
+			<source ref="id2"/>
+			<target ref="id2"/>
 			<label kind="guard" x="-714" y="-688">x &gt;= 1</label>
 			<label kind="assignment" x="-705" y="-671">turn(),
 x = 0</label>
@@ -288,81 +160,8 @@ x = 0</label>
 			<nail x="-628" y="-671"/>
 		</transition>
 		<transition>
-			<source ref="id4"/>
-			<target ref="id5"/>
-			<label kind="guard" x="0" y="-493">direction == 0 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="42" y="-459">move(),
-x = 0</label>
-			<nail x="25" y="-399"/>
-			<nail x="42" y="-493"/>
-			<nail x="34" y="-535"/>
-		</transition>
-		<transition>
-			<source ref="id4"/>
-			<target ref="id4"/>
-			<label kind="guard" x="-119" y="-357">x &gt;= 1</label>
-			<label kind="assignment" x="-110" y="-340">turn(),
-x = 0</label>
-			<nail x="-57" y="-256"/>
-			<nail x="-93" y="-272"/>
-			<nail x="-73" y="-288"/>
-			<nail x="-57" y="-288"/>
-			<nail x="-41" y="-280"/>
-		</transition>
-		<transition>
-			<source ref="id6"/>
-			<target ref="id6"/>
-			<label kind="guard" x="-61" y="79">x &gt;= 1</label>
-			<label kind="assignment" x="-68" y="136">turn(),
-x = 0</label>
-			<nail x="-73" y="109"/>
-			<nail x="-49" y="133"/>
-			<nail x="-33" y="117"/>
-		</transition>
-		<transition>
-			<source ref="id6"/>
-			<target ref="id4"/>
-			<label kind="guard" x="42" y="-128">direction == 0 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="67" y="-102">move(),
-x = 0</label>
-			<nail x="34" y="-17"/>
-			<nail x="51" y="-93"/>
-			<nail x="25" y="-144"/>
-		</transition>
-		<transition>
-			<source ref="id5"/>
-			<target ref="id5"/>
-			<label kind="guard" x="-59" y="-689">x &gt;= 1</label>
-			<label kind="assignment" x="-102" y="-723">turn(),
-x = 0</label>
-			<nail x="-57" y="-639"/>
-			<nail x="-65" y="-655"/>
-			<nail x="-73" y="-671"/>
-			<nail x="-57" y="-671"/>
-			<nail x="-41" y="-663"/>
-		</transition>
-		<transition>
-			<source ref="id7"/>
+			<source ref="id8"/>
 			<target ref="id8"/>
-			<label kind="guard" x="544" y="-450">direction == 0 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="612" y="-425">move(),
-x = 0</label>
-		</transition>
-		<transition>
-			<source ref="id7"/>
-			<target ref="id7"/>
-			<label kind="guard" x="578" y="-289">x &gt;= 1</label>
-			<label kind="assignment" x="586" y="-272">turn(),
-x = 0</label>
-			<nail x="489" y="-267"/>
-			<nail x="481" y="-283"/>
-			<nail x="473" y="-299"/>
-			<nail x="489" y="-299"/>
-			<nail x="505" y="-291"/>
-		</transition>
-		<transition>
-			<source ref="id9"/>
-			<target ref="id9"/>
 			<label kind="guard" x="513" y="133">x &gt;= 1</label>
 			<label kind="assignment" x="555" y="82">turn(),
 x = 0</label>
@@ -371,15 +170,8 @@ x = 0</label>
 			<nail x="522" y="123"/>
 		</transition>
 		<transition>
-			<source ref="id9"/>
+			<source ref="id7"/>
 			<target ref="id7"/>
-			<label kind="guard" x="552" y="-144">direction == 0 &amp;&amp; x &gt;= 5</label>
-			<label kind="assignment" x="612" y="-110">move(),
-x = 0</label>
-		</transition>
-		<transition>
-			<source ref="id8"/>
-			<target ref="id8"/>
 			<label kind="guard" x="552" y="-680">x &gt;= 1</label>
 			<label kind="assignment" x="561" y="-646">turn(),
 x = 0</label>
@@ -412,12 +204,6 @@ system Process;</system>
 			<formula>E&lt;&gt;(visited[0][1][0] + visited[0][1][1] + visited[0][1][2] + visited[0][1][3]) &gt;= 1 &amp;&amp; (visited[0][2][0] + visited[0][2][1] + visited[0][2][2] + visited[0][2][3]) &gt;= 1 &amp;&amp; (visited[1][0][0] + visited[1][0][1] + visited[1][0][2] + visited[1][0][3]) &gt;= 1 &amp;&amp; (visited[1][1][0] + visited[1][1][1] + visited[1][1][2] + visited[1][1][3]) &gt;= 1 &amp;&amp; (visited[1][2][0] + visited[1][2][1] + visited[1][2][2] + visited[1][2][3]) &gt;= 1 &amp;&amp; (visited[2][0][0] + visited[2][0][1] + visited[2][0][2] + visited[2][0][3]) &gt;= 1 &amp;&amp; (visited[2][1][0] + visited[2][1][1] + visited[2][1][2] + visited[2][1][3]) &gt;= 1 &amp;&amp; (visited[2][2][0] + visited[2][2][1] + visited[2][2][2] + visited[2][2][3]) &gt;= 1 &amp;&amp; (visited[0][1][0] + visited[0][1][1] + visited[0][1][2] + visited[0][1][3]) &lt;= 2 &amp;&amp; (visited[0][2][0] + visited[0][2][1] + visited[0][2][2] + visited[0][2][3]) &lt;= 2 &amp;&amp; (visited[1][0][0] + visited[1][0][1] + visited[1][0][2] + visited[1][0][3]) &lt;= 2 &amp;&amp; (visited[1][1][0] + visited[1][1][1] + visited[1][1][2] + visited[1][1][3]) &lt;= 2 &amp;&amp; (visited[1][2][0] + visited[1][2][1] + visited[1][2][2] + visited[1][2][3]) &lt;= 2 &amp;&amp; (visited[2][0][0] + visited[2][0][1] + visited[2][0][2] + visited[2][0][3]) &lt;= 2 &amp;&amp; (visited[2][1][0] + visited[2][1][1] + visited[2][1][2] + visited[2][1][3]) &lt;= 2 &amp;&amp; (visited[2][2][0] + visited[2][2][1] + visited[2][2][2] + visited[2][2][3]) &lt;= 2 &amp;&amp; locX == 0 &amp;&amp; locY == 0 &amp;&amp; direction == 0
 			</formula>
 			<comment>E&lt;&gt;visited[0][0][0] &lt;= 2 &amp;&amp; visited[0][0][1] &lt;= 2 &amp;&amp; visited[0][0][2] &lt;= 2 &amp;&amp; visited[0][0][3] &lt;= 2 &amp;&amp; visited[0][1][0] &lt;= 1 &amp;&amp; visited[0][1][1] &lt;= 1 &amp;&amp; visited[0][1][2] &lt;= 1 &amp;&amp; visited[0][1][3] &lt;= 1 &amp;&amp; visited[0][2][0] &lt;= 1 &amp;&amp; visited[0][2][1] &lt;= 1 &amp;&amp; visited[0][2][2] &lt;= 1 &amp;&amp; visited[0][2][3] &lt;= 1 &amp;&amp; visited[1][0][0] &lt;= 1 &amp;&amp; visited[1][0][1] &lt;= 1 &amp;&amp; visited[1][0][2] &lt;= 1 &amp;&amp; visited[1][0][3] &lt;= 1 &amp;&amp; visited[1][1][0] &lt;= 1 &amp;&amp; visited[1][1][1] &lt;= 1 &amp;&amp; visited[1][1][2] &lt;= 1 &amp;&amp; visited[1][1][3] &lt;= 1 &amp;&amp; visited[1][2][0] &lt;= 1 &amp;&amp; visited[1][2][1] &lt;= 1 &amp;&amp; visited[1][2][2] &lt;= 1 &amp;&amp; visited[1][2][3] &lt;= 1 &amp;&amp; visited[2][0][0] &lt;= 1 &amp;&amp; visited[2][0][1] &lt;= 1 &amp;&amp; visited[2][0][2] &lt;= 1 &amp;&amp; visited[2][0][3] &lt;= 1 &amp;&amp; visited[2][1][0] &lt;= 1 &amp;&amp; visited[2][1][1] &lt;= 1 &amp;&amp; visited[2][1][2] &lt;= 1 &amp;&amp; visited[2][1][3] &lt;= 1 &amp;&amp; visited[2][2][0] &lt;= 1 &amp;&amp; visited[2][2][1] &lt;= 1 &amp;&amp; visited[2][2][2] &lt;= 1 &amp;&amp; visited[2][2][3] &lt;= 1 &amp;&amp; locX == 0 &amp;&amp; locY == 0
-			</comment>
-		</query>
-		<query>
-			<formula>E&lt;&gt;locX==0&amp;&amp;locY==0&amp;&amp;(visited[2][2][0]+visited[2][2][1]+visited[2][2][2]+visited[2][2][3]) &gt;= 1
-			</formula>
-			<comment>
 			</comment>
 		</query>
 	</queries>
